@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Page } from 'src/app/shared/model/page';
 import { Product } from './model/product';
 
 @Injectable({
@@ -10,8 +11,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  getProduct(): Observable <Product[]> {
-return this.http.get<Product[]>("api/product");
+  getProduct(page:number, size: number): Observable <Page<Product>> {
+return this.http.get<Page<Product>>(`api/product?page=${page}&size=${size}`);
 
 //     return[
 // {
