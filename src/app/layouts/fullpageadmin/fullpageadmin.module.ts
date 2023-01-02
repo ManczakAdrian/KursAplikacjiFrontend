@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AdminProductComponent } from 'src/app/modules/admin/admin-product/admin-product.component';
 import { MaterialModule } from 'src/app/shared/material.module';
+import { AdminProductUpdateComponent } from 'src/app/modules/admin/admin-product-update/admin-product-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -13,13 +15,15 @@ import { MaterialModule } from 'src/app/shared/material.module';
   declarations: [
     FullpageadminComponent,
     AdminComponent,
-    AdminProductComponent
+    AdminProductComponent,
+    AdminProductUpdateComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class FullpageadminModule { }

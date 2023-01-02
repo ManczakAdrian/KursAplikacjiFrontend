@@ -13,7 +13,7 @@ export class AdminProductComponent implements AfterViewInit{
   
   
   @ViewChild (MatPaginator) paginator!: MatPaginator;
-  displayedColumns: string[]=["id", "name","price"]
+  displayedColumns: string[]=["id", "name","price","actions"]
   totalElements: number = 0;
   data:AdminProduct[] = [];
 
