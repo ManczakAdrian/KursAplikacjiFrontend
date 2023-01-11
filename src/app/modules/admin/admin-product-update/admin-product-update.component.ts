@@ -24,6 +24,7 @@ productForm!: FormGroup;
   
   ngOnInit():void{
     this.getProduct();
+
     this.productForm= this.formBuilder.group({ 
       name:[''],
       description: [''],
@@ -31,7 +32,7 @@ productForm!: FormGroup;
       price: [''],
       currency: ['PLN'],
 
-    })
+    });
     
   }
   getProduct(){
