@@ -8,10 +8,14 @@ import { AdminProduct } from './adminProduct';
   providedIn: 'root'
 })
 export class AdminProductService {
-
+  
   constructor(private http:HttpClient) { }
 
-  getProduct(page:number, size: number): Observable <Page<AdminProduct>> {
-    return this.http.get<Page<AdminProduct>>(`api/admin/product?page=${page}&size=${size}`);
+  getProduct(page:number, size: number): Observable<Page<AdminProduct>> {
+    return this.http.get<Page<AdminProduct>>(`api/admin/products?page=${page}&size=${size}`);
 }
+delete(id: number): Observable<void> {
+  return this.http.delete<void>('/api/admin/products/' + id)
+}
+
 }

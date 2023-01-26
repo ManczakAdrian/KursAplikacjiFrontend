@@ -21,15 +21,15 @@ const routes: Routes = [
   },
   {
     path:'',component:FullpageComponent, children: [
-      {path: 'login', component:LoginComponent  },
+      {path: 'login', component:LoginComponent  }
     ]
   },
   {
     path:'',component:FullpageadminComponent, children: [
-      {path: 'admin', component:AdminComponent  },
-      {path: 'admin/products', component:AdminProductComponent  },
-      {path: 'admin/products/update/:id', component:AdminProductUpdateComponent  },
-      {path: 'admin/products/add', component:AdminProductAddComponent  },
+      {path: 'admin', component:AdminComponent},
+      {path: 'admin/products', component:AdminProductComponent},
+      {path: 'admin/products/update/:id', component:AdminProductUpdateComponent},
+      {path: 'admin/products/add', component:AdminProductAddComponent},
     ]
   }
 ];
